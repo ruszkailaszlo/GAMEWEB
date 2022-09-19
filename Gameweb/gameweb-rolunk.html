@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./gameweb-rolunk.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMEWEB</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="nav" id="myTopnav">
+        <div class="logo">
+            <img src="img/logo.png">
+        </div>
+        <a href="javascript:void(0);" class="ikon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="nav_elements">
+            <a class="active" href="gameweb.html">Főoldal</a>
+            <a href="allgames.html">Kategóriák</a>
+            <a href="gameweb-rolunk.html">Rólunk</a>
+        </div>
+      </div>
+      <h1>GAMEWEB TEAM</h1>
+      <span class="border"></span>
+      <div class="team">
+          <div class="card">
+              <div class="img">
+                  <img src="img/laci.png">
+              </div>
+              <div class="text">
+                  <h2>Ruszkai László</h2>
+                  <div class="btn">
+                      <i class="fa fa-plus" aria-hidden="true"></i>
+                  </div>
+              </div>
+              <div class="more-text">
+                  <h2>Ruszkai László</h2>
+                  <p>Kedvelem a testépítést és az ehhez kapcsolódó sportok területét.
+                      Kiskorom óta előtérbe helyeztem a sportolást.
+                      Próbálok egyre többet fejlődni és a jövőben szeretnék segíteni másoknak.
+                  </p>
+              </div>
+          </div>
+          <div class="card">
+              <div class="img">
+                  <img src="img/dani.jpg">
+              </div>
+              <div class="text">
+                  <h2>Szabó Dániel</h2>
+                  <div class="btn">
+                      <i class="fa fa-plus" aria-hidden="true"></i>
+                  </div>
+              </div>
+              <div class="more-text">
+                  <h2>Szabó Dániel</h2>
+                  <p>Egy szoftverfejlesztő tanuló célokkal teli ember vagyok. Edzés és a fejlődés a mindenem, ezzel szemben szeretek jókat gamelni is.
+                  </p>
+              </div>
+          </div>
+      </div>
+      
+
+
+      <div class="animate-box">
+    
+        <div>
+        </div>
+        
+        <div>
+        </div>
+        
+        <div>
+        </div>
+        
+        <div>
+        </div>
+        
+        <div>
+        </div>
+        
+        <div>
+        </div>
+        
+        <div>
+        </div>
+        
+        <div>
+        </div>
+        
+        <div>
+        </div>
+        
+        <div>
+        </div>
+        
+        <div>
+        </div>
+    
+        <div>
+        </div>
+            
+    </div>
+<script>
+    function myFunction() {
+            var x=document.getElementById("myTopnav");
+            if (x.className === "nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav";
+            }
+    }
+
+    var slideIndex = 0;
+    showSlides();
+    function currentSlide(n) {
+        showSlides(slideIndex=n);
+    }
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000);
+    }
+</script>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".btn").on("click", function(){
+            $(this).parent().parent().find(".more-text").toggleClass("active");
+        });
+    }); 
+</script>
+</body>
+</html>

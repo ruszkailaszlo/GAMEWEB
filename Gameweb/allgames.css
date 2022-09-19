@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("img/bg.jpg");
+    background-attachment: fixed;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: #f2f2f2; 
+    margin-bottom: 8%;
+}
+
+.nav a{
+    float: right;
+    text-align: center;
+    font-size: 18px;
+    padding: 18px 22px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.nav a:hover{
+    background-color: #cccccc;
+}
+
+.nav a.active {
+    background-color: #04AA6D;
+}
+
+.nav .ikon{
+    display: none;
+}
+
+.logo img{
+    margin: 0px 10px;
+    width: 60px;
+    float: left;
+}
+
+.animate-box div {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: animate 4s linear infinite;
+    background: rgba(255,255,255,.7);
+    border-radius: 15px;
+    z-index: -1;
+}
+.animate-box div:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+}
+.animate-box div:nth-child(2) {
+    top: 26%;
+    left: 89%;
+    animation: animate 10s linear infinite;
+}
+.animate-box div:nth-child(3) {
+    top: 80%;
+    left: 90%;
+    animation: animate 5s linear infinite;
+}
+.animate-box div:nth-child(4) {
+    top: 65%;
+    left: 75%;
+    animation: animate 7s linear infinite;
+}
+.animate-box div:nth-child(5) {
+    top: 90%;
+    left: 10%;
+    animation: animate 9s linear infinite;
+}
+.animate-box div:nth-child(6) {
+    top: 30%;
+    left: 60%;
+    animation: animate 5s linear infinite;
+}
+.animate-box div:nth-child(7) {
+    top: 70%;
+    left: 33%;
+    animation: animate 8s linear infinite;
+}
+.animate-box div:nth-child(8) {
+    top: 75%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+.animate-box div:nth-child(9) {
+    top: 23%;
+    left: 50%;
+    animation: animate 6s linear infinite;
+}
+.animate-box div:nth-child(10) {
+    top: 35%;
+    left: 7%;
+    animation: animate 10s linear infinite;
+}
+.animate-box div:nth-child(11){
+    top: 50%;
+    left: 43%;
+    animation: animate 8s linear infinite;
+}
+.animate-box div:nth-child(12) {
+    top: 97%;
+    left: 45%;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+0% {
+    transform: scale(0) translateY(0) rotate(50deg);
+}
+100% {
+    transform: scale(1.6) translateY(-250px) rotate(360deg);
+}
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1400px;
+  margin-top: 45px;
+  margin-bottom: 70px;
+  margin: auto;
+}
+
+.card {
+  position: relative;
+  min-width: 200px;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 20%;
+  text-align: center;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #ffce00;
+  transform: skewY(345deg);
+  transition: 0.5s;
+  left: 0;
+}
+
+.card:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+
+.card::after {
+  content: "GAMEWEB";
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  font-weight: 600;
+  font-size: 5em;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+/*
+.card .imgBox img {
+    max-width: 100%;
+    
+    transition: .5s;
+}
+
+.card:hover .imgBox img {
+    max-width: 50%;
+      
+}
+*/
+.card .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.card .contentBox h3 {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .price {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #ffce00;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.card:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+
+.mouse {
+  height: 300px;
+  width: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .nav a:not(:first-child) {display: none;}
+    .nav a.ikon{
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+.nav.responsive{
+    position: relative;
+    }
+.nav.responsive.ikon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    }
+.nav.responsive .nav_elements a{
+    float: none;
+    display: block;
+    text-align: left;
+    }
+.nav.responsive img{
+    display: none;
+    }
+
+}
