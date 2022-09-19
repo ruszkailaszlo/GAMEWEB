@@ -6,7 +6,6 @@ body{
     background-image: url("img/bg.jpg");
     background-attachment: fixed;
     font-family: 'Oswald', sans-serif;
-    overflow-y: hidden;
     overflow-x: hidden;
 }
 
