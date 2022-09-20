@@ -31,7 +31,7 @@ a{
 .nav {
     overflow: hidden;
     background-color: #f2f2f2; 
-    margin-bottom: 50px;
+    margin-bottom: 8%;
 }
 
 .nav a{
@@ -63,7 +63,8 @@ header {
     letter-spacing: 0.2em;
     text-align: center;
     padding: 20px 5px;
-    color: whitesmoke;
+    color: black;
+    text-decoration: overline;
 }
 
 
