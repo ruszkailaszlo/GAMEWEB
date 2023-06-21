@@ -187,7 +187,7 @@ function endGame(result) {
 clearInterval(timer);
 if (result === "lose") {
 for (var i=0; i<boxElts.length; i++) {boxElts[i].classList.remove("backgrounded");}
-msgElt.innerHTML = "Majd legközelebb :("; 
+msgElt.innerHTML = "Hiányos a szaktudásod, Vivien :("; 
 }
 else if (result === "win") {
 msgElt.innerHTML = "Nyertél " + time + " sec!";    
